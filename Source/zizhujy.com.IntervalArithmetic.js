@@ -367,9 +367,15 @@
         },
 
         ln: function (interval) {
-            var l = Math.ln(interval.val[0]);
-            var t = Math.ln(interval.val[1]);
-
+            if (Math.ln !== undefined){
+                var l = Math.ln(interval.val[0]);
+                var t = Math.ln(interval.val[1]);
+            } else {
+                // On latest Firefox/Ubuntu Math.ln is undefined, as Math.log() takes the natural log.
+                var l = Math.log(interval.val[0]);
+                var t = Math.log(interval.val[1]);
+            }
+            
             var def = interval.def;
             if (isNaN(l) && isNaN(t)) def = [false, false];
             else if (isNaN(l) || isNaN(t)) def = [false, interval.def[1]];
