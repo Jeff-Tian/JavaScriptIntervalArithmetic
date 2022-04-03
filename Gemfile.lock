@@ -1,13 +1,17 @@
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     albacore (0.2.6)
     rubyzip (0.9.9)
 
 PLATFORMS
+  x64-mingw-ucrt
   x64-mingw32
   x86-mingw32
 
 DEPENDENCIES
   albacore (= 0.2.6)
   rubyzip (= 0.9.9)
+
+BUNDLED WITH
+   2.3.7
