@@ -5,8 +5,9 @@ GEM
     rubyzip (0.9.9)
 
 PLATFORMS
-  x64-mingw-ucrt
+  universal-darwin-21
   x64-mingw32
+  x64-unknown
   x86-mingw32
 
 DEPENDENCIES
@@ -14,4 +15,4 @@ DEPENDENCIES
   rubyzip (= 0.9.9)
 
 BUNDLED WITH
-   2.3.7
+   2.3.11
