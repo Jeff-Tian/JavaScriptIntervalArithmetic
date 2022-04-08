@@ -32,15 +32,25 @@ Install dependencies
 bundle install
 ```
 
+Install phantomjs
+=================
+The js test cases can be executed by phantomjs, to install it, run:
+
+```shell
+brew install --cask phantomjs
+```
+
 Running tests
-==============
-With the above toolchains installed, you can just type `rake` to run tests.
+==================
+With the above toolchain installed, you can just type `rake` to run tests.
 
 In mac osx:
 
 ```shell
 GEM_PATH=ruby/2.6.0 rake --trace
 ```
+
+![](./testpass.png)
 
 
 Trouble shooting guide
@@ -62,3 +72,16 @@ sudo gem install bundler
 ```
 
 to install latest bundler
+
+
+2. mac os `phantomjs` can not be opened
+![](./phantomjs-error.jpg)
+![](./no-effect.jpg)
+
+Refer to https://www.yuque.com/tian-jie/blog/xsh9nz, run 
+
+```shell
+sudo spctl --master-disable
+```
+
+![](./success.png)

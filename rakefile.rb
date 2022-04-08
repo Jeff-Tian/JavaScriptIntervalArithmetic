@@ -2,6 +2,7 @@ gem 'albacore', '=0.2.6'
 require 'albacore'
 require 'rake'
 require 'yaml'
+require 'os'
 
 $ROOT = File.expand_path(Dir.pwd)
 
@@ -27,8 +28,10 @@ Dir.glob(testsFiles) do |item|
 	next if item == '.' or item == '..'
 	
 	i = i+1
+
+	phantomjs = OS.mac? ? 'phantomjs' : File.join($ROOT, 'AutoTools/phantomjs.exe')
 	
-	command = File.join($ROOT, 'AutoTools/phantomjs.exe') + ' ' + File.join($ROOT, 'AutoTools/Scripts/run-jasmine.js') + ' ' +
+	command = phantomjs + ' ' + File.join($ROOT, 'AutoTools/Scripts/run-jasmine.js') + ' ' +
 	((Pathname.new item).relative_path_from (Pathname.new File.join($ROOT, 'AutoTools'))).to_s
 	
 	puts ''
