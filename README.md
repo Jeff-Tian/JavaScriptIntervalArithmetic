@@ -52,6 +52,15 @@ GEM_PATH=ruby/2.6.0 rake --trace
 
 ![](./testpass.png)
 
+### Check test details 
+
+open the html report file indicated by the command line output in the above step:
+
+```shell
+open file:///Users/cnjeftia/jeff-tian/JavaScriptIntervalArithmetic/Source/Scripts.Test/spec/zizhujy.com.IntervalArithmetic.Spec.html?spec=zizhujy.com.IntervalArithmetic%20test%20suite
+```
+![](./report.png)
+
 
 Trouble shooting guide
 ===============
